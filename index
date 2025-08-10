@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Live Quotes — Dynamic Quote Generator</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <h1>Live Quotes</h1>
+      <div class="controls">
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </header>
+
+    <section class="card" id="quoteCard" aria-live="polite">
+      <blockquote id="quoteText">Loading...</blockquote>
+      <cite id="quoteAuthor"></cite>
+
+      <div class="actions">
+        <button id="newQuote">New Quote</button>
+        <button id="copyQuote">Copy</button>
+        <button id="favoriteBtn" aria-pressed="false">♡ Favorite</button>
+        <button id="tweetBtn">Tweet</button>
+      </div>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="favorites">
+      <h2>Favorites</h2>
+      <ul id="favoritesList" class="fav-list"></ul>
+    </section>
+
+    <footer class="footer">
+      <small>Quotes powered by <a href="https://quotable.io" target="_blank" rel="noopener">Quotable</a>.</small>
+    </footer>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
